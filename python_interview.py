@@ -1,4 +1,3 @@
-"""
 def list_str(input_str) -> [str]:   # returns only strings and digits <= 5
     new = []
     for inputs in input_str:
@@ -219,7 +218,7 @@ def missing_num_array(size: int, num_array: []):    # missing number in the give
 
 
 print(missing_num_array(10, [1, 4, 5, 3, 6, 7, 8, 9, 10]))
-"""
+
 
 def duplicate_num_array(num_array: []):      # count of duplicate numbers in the given array
     out_list = {}
