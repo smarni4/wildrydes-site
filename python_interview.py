@@ -1,3 +1,4 @@
+"""
 def list_str(input_str) -> [str]:   # returns only strings and digits <= 5
     new = []
     for inputs in input_str:
@@ -233,3 +234,44 @@ def duplicate_num_array(num_array: []):      # count of duplicate numbers in the
 
 
 duplicate_num_array([1, 5, 4, 6, 7, 8, 2, 1, 5, 4])
+"""
+
+def read_char(file_path: str):
+    count = 0
+    with open(file_path, "r") as f:
+        for char in f.read():
+            count += 1
+    return count
+
+def union_intersection():
+    python = {"Iron man", "spider man"}
+    java = {"Iron man", "super man"}
+    print(python.intersection(java))
+    print(python.union(java))
+    print(java.union(python))
+    print(python)
+    for i in (i for i in range(10)):
+        print(i)
+
+class calc:
+    def __init__(self):
+        pass
+
+    def add(self, x, y):
+        return x + y
+
+    def mul(self, x, y):
+        result = 0
+        for i in range(y):
+            result = self.add(result, x)
+        return result
+
+    def rec_fact(self, num):
+        if num == 0:
+            return 1
+        else:
+            fac_result = self.mul(num, self.rec_fact(num - 1))
+            return fac_result
+
+
+
