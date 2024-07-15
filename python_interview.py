@@ -1,8 +1,8 @@
 """
-def list_str(input_str) -> [str]:   # returns only strings and digits <= 5
+def list_str(input_str) -> [str]: # returns only strings and digits <= 5
     new = []
     for inputs in input_str:
-        if inputs == ' ' or (inputs.isdigit() and int(inputs) > 5):
+        if inputs == '' or (inputs.isdigit() and int(inputs) > 5):
             continue
         new.append(inputs)
     return new
@@ -12,7 +12,7 @@ text = list_str("My string56")
 print(text)
 
 
-def vowel_count(input_str):     # returns count of vowels in the given string
+def vowel_count(input_str): # returns count of vowels in the given string
     vowel = ['a', 'e', 'i', 'o', 'u']
     count = 0
     for vo in input_str:
@@ -44,7 +44,7 @@ def fibonacci(n: int):      # fibonacci series using iterative method
 print(fibonacci(5))
 
 
-def fibonacci_rec(num):        # fibonacci series using recursive method
+def fibonacci_rec(num): # fibonacci series using recursive method
     if num == 0:
         return 0
     elif num == 1:
@@ -58,10 +58,10 @@ for i in range(0, number):
     print(fibonacci_rec(i))
 
 
-def max_num(num_list: []) -> str:       # return max number in the given list
+def max_num(num_list: []) -> str: # return max number in the given list
     maxi = num_list[0]
     for num in num_list:
-        if maxi < num:      # for minimum number change the less than to greater than.
+        if maxi < num: # for minimum number change the less than to greater than.
             maxi = num
     return maxi
 
@@ -69,7 +69,7 @@ def max_num(num_list: []) -> str:       # return max number in the given list
 print(max_num([1, 5, 16, 18, 9]))
 
 
-def str_list(input_list: []) -> str:    # Converts list of strings into a string
+def str_list(input_list: []) -> str: # Converts list of strings into a string
     out_str = ''
     for character in input_list:
         out_str += character
@@ -79,7 +79,7 @@ def str_list(input_list: []) -> str:    # Converts list of strings into a string
 print(str_list(['p', 'y', 't', 'h', 'o', 'n']))
 
 
-def reverse_num(num: int):      # reverse number iterative method
+def reverse_num(num: int): # reverse number iterative method
     rev = 0
     while num != 0:
         rev = rev*10 + num % 10
@@ -90,7 +90,7 @@ def reverse_num(num: int):      # reverse number iterative method
 print(reverse_num(5249))
 
 
-def palindrome_num(nump: int):       # palindrome iterative method
+def palindrome_num(nump: int): # palindrome iterative method
     r = 0
     numi = nump
     while nump != 0:
@@ -105,7 +105,7 @@ def palindrome_num(nump: int):       # palindrome iterative method
 
 print(palindrome_num(151))
 
-num1 = int(input("Enter the number for recursive palindrome:"))     # Palindrome recursive number
+num1 = int(input("Enter the number for recursive palindrome:")) # Palindrome recursive number
 
 def reverse(num):
     if num < 10:
@@ -122,7 +122,7 @@ def palindrome_rec(num):
 print(palindrome_rec(num1))
 
 
-def armstrong_num(num: int):        # Armstrong number
+def armstrong_num(num: int): # Armstrong number
     tot = 0
     input_num = num
     while num != 0:
@@ -169,7 +169,7 @@ def greatest_3(num_1: int, num_2: int, num_3: int):
 print(greatest_3(14, 15, 19))
 
 
-def factorial_rec(num: int):        # factorial using recursion
+def factorial_rec(num: int): # factorial using recursion
     if num == 1:
         return 1
     else:
@@ -179,7 +179,7 @@ def factorial_rec(num: int):        # factorial using recursion
 print(factorial_rec(5))
 
 
-def power_val(base: int, power: int):       # calculates the power of base number value without using pow method
+def power_val(base: int, power: int): # calculates the power of base number value without using pow method
     if base == 0:
         return 0
     elif power == 0:
@@ -194,7 +194,7 @@ print(power_val(2, 3))
 def prime_till_n(n: int):       # prime numbers till given  integer
     prime_list = []
     if n <= 0 or n == 1:
-        return "Enter the number greate than 1"
+        return "Enter the number greater than 1"
     else:
         pr = 2
         pr_num = 2
@@ -209,7 +209,7 @@ def prime_till_n(n: int):       # prime numbers till given  integer
 print(prime_till_n(5))
 
 
-def missing_num_array(size: int, num_array: []):    # missing number in the given series of natural numbers array
+def missing_num_array(size: int, num_array: []): # missing number in the given series of the natural numbers array
     actual_sum = int(size*(size+1)/2)
     result_sum = 0
     for i, num in enumerate(num_array):
@@ -234,7 +234,7 @@ def duplicate_num_array(num_array: []):      # count of duplicate numbers in the
 
 
 duplicate_num_array([1, 5, 4, 6, 7, 8, 2, 1, 5, 4])
-"""
+
 
 def read_char(file_path: str):
     count = 0
@@ -252,6 +252,9 @@ def union_intersection():
     print(python)
     for i in (i for i in range(10)):
         print(i)
+
+
+
 
 class calc:
     def __init__(self):
@@ -273,5 +276,126 @@ class calc:
             fac_result = self.mul(num, self.rec_fact(num - 1))
             return fac_result
 
+c = calc()
+print(c.add(2,3))
+print(c.mul(3,5))
 
 
+list1 = [3, 5, 0, 7, 0, 1, 2]
+tmp = []
+
+for i in range(len(list1)):
+    if list1[i] != 0:
+        tmp.append(list1[i])
+for i in range(len(list1) - len(tmp)):
+    if len(list1) != len(tmp):
+        tmp.append(0)
+
+print(tmp)
+"""
+
+# Covariance
+print("Covariance")
+
+import numpy as np
+
+def covariance(x, y):
+    """
+    Calculates the covariance between two arrays
+
+    :param x:
+    :param y:
+    :return:
+    """
+    x_mean = np.mean(x)
+    y_mean = np.mean(y)
+    cov = np.sum((x - x_mean) * (y - y_mean)) / len(x) - 1
+    return cov
+
+
+x = np.array([1, 5, 3, 6, 7])
+y = np.array([4, 8, 2, 9, 11])
+
+print(covariance(x, y))
+
+
+# Correlation
+
+print("Correlation")
+def correlation(x, y):
+    """
+    Calculates the correlation between two arrays
+    :param x:
+    :param y:
+    :return:
+    """
+    std_x = np.std(x)
+    std_y = np.std(y)
+    cov = np.cov(x, y)[0, 1]
+    corr = cov / (std_x * std_y)
+
+    return corr
+
+
+x = np.array([1, 5, 3, 6, 7])
+y = np.array([4, 8, 2, 9, 11])
+
+print(correlation(x, y))
+
+
+# Linear Regression
+
+print("Linear Regression")
+
+from sklearn.linear_model import LinearRegression
+
+def linear_regression(x, y):
+    """
+    Perform linear regression on two arrays
+
+    :param x:
+    :param y:
+    :return:
+    """
+
+    X = np.array(x).reshape(-1, 1)
+    y = np.array(y)
+    model = LinearRegression()
+    model.fit(X, y)
+    return model
+
+
+x = np.array([1, 5, 3, 6, 7])
+y = np.array([4, 8, 2, 9, 11])
+m1 = linear_regression(x, y)
+print(m1)
+print(f"Coefficients: {m1.coef_}")
+print(f"Intercept: {m1.intercept_}")
+
+
+# Random Forest
+
+print("Random Forest")
+
+from sklearn.ensemble import RandomForestRegressor
+
+def random_forest(x, y, n_estimators=100, random_state=42):
+    """
+    Perform random forest regression on two arrays x and y
+    :param x:
+    :param y:
+    :param n_estimators:
+    :param random_state:
+    :return:
+    """
+    X = np.array(x)
+    y = np.array(y)
+    model1 = RandomForestRegressor(n_estimators=n_estimators, random_state=random_state)
+    model1.fit(X, y)
+    return model1
+
+
+x = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]])
+y = np.array([4, 8, 2, 9, 11])
+model = random_forest(x, y)
+print(f"Feature importance : {model.feature_importances_}")
